@@ -29,8 +29,8 @@ def text2specgram(text, start_freq, end_freq, freq_step, step_scale, char_speed,
     draw = ImageDraw.Draw(img)
 
     #なんとなくフォント選択（下のは日本語）
-    # kbd = ImageFont.truetype("/Users/aosin/miniforge3/envs/major2/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/cmb10.ttf", freq_step)
-    kbd = ImageFont.truetype("/Users/aosin/Library/Fonts/ipag.ttf", freq_step)
+    # kbd = ImageFont.truetype("任意のフォント", freq_step)
+    kbd = ImageFont.truetype("ipag.ttf", freq_step)
     draw.text((int(freq_step / 2), 0), text, font=kbd, fill=(255, 255, 255))
     img = img.convert("L")  # グレースケール変換
 
